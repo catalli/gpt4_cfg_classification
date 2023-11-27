@@ -1,0 +1,37 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "((()))" Label: True
+Input: "[][[]]" Label: True
+Input: "[[]]" Label: True
+Input: "(((((())))()))" Label: True
+Input: "[[]]" Label: True
+Input: "[]" Label: True
+Input: "()" Label: True
+Input: "()()" Label: True
+Input: "[][]" Label: True
+Input: "[[][[]]]" Label: True
+Input: "(()[])[()[]]" Label: False
+Input: "((()[])[])[]" Label: False
+Input: "()[()[]]" Label: False
+Input: "()[()[]]" Label: False
+Input: "()[]" Label: False
+Input: "[()][()]" Label: False
+Input: "[()]" Label: False
+Input: "[()]" Label: False
+Input: "[()]" Label: False
+Input: "[()]" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Based on the examples you've provided, Pattern P appears to describe strings where brackets and parentheses are correctly matched and nested, but without any intermixing or interleaving. That is, an opening "parenthesis" "(" must be closed with a closing "parenthesis" ")" without being interrupted by a bracket, and an opening "bracket" "[" must be closed with a closing "bracket" "]" without being interrupted by a parenthesis. 
+
+Here's why I believe this is the pattern: strings such as '(()[])[()[]]' and '()[]' that includes parentheses inside brackets or vice versa are labeled as False, while those that have perfect nesting with either parentheses or brackets, such as '((()))', '[][[]]', '(((((())))()))', '[[]]', '()', '[][]' and '[[][[]]]' are labeled as True.
+
+A more formal way of expressing this would be: a string matches Pattern P if and only if it is an empty string, or it is a concatenation of strings that match Pattern P, where each string is either enclosed in parentheses with no brackets inside, or enclosed in brackets with no parentheses inside.

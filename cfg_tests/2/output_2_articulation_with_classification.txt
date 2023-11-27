@@ -1,0 +1,103 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "()" Label: True
+Input: "()[]" Label: True
+Input: "()[]()" Label: True
+Input: "" Label: True
+Input: "()[]()" Label: True
+Input: "()[]" Label: True
+Input: "()[]" Label: True
+Input: "()[]()[]()[]" Label: True
+Input: "()[]()[]()[]()[]" Label: True
+Input: "()[]()[]()[]()[]()[]()" Label: True
+Input: "(())]]]]())" Label: False
+Input: "([" Label: False
+Input: ")((" Label: False
+Input: "](([)]]([[]])(" Label: False
+Input: "])([][)]()()[))()]" Label: False
+Input: "[[([(([]))])]]" Label: False
+Input: "(([]))" Label: False
+Input: "(())" Label: False
+Input: "([[()]])" Label: False
+Input: "(()())(())(())" Label: False
+
+
+Additionally, here are a number of unlabeled strings. For each string, label it, in the format given, as True (if you think it fits Pattern P) or False (if you think it does not), and explain your reasoning.
+
+Input: "()" Label:
+
+Input: "]))" Label:
+
+Input: "]]][[([]" Label:
+
+Input: "()" Label:
+
+Input: "" Label:
+
+Input: "(((([[]]))))" Label:
+
+Input: "" Label:
+
+Input: "" Label:
+
+Input: "([])" Label:
+
+Input: "))))([([[]](([" Label:
+
+
+Finally, describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+The labels for the unlabeled strings are as follows:
+
+Input: "()" Label: True
+
+- This string is valid because it matches the consistent pattern of opening and closing parentheses in that sequence.
+
+Input: "]))" Label: False
+
+- This string is invalid because it starts with closing brackets which does not fit the pattern.
+
+Input: "]]][[([]" Label: False
+
+- This string is invalid because it starts with closing brackets, which does not fit the pattern, and it also includes misplaced opening and closing brackets.
+
+Input: "()" Label: True
+
+- This string is valid it contains a pair of opening and closing parentheses.
+
+Input: "" Label: True
+
+- This string is considered valid because it is empty. An empty string does not violate any rules.
+
+Input: "(((([[]]))))" Label: False
+
+- This string is invalid. While the parentheses and brackets are all matched correctly, the pattern also requires alternating parentheses and brackets.
+
+Input: "" Label: True
+
+- As above, an empty string is considered valid.
+
+Input: "" Label: True
+
+- As above, an empty string is considered valid.
+
+Input: "([])" Label: False
+
+- This string is invalid. It contains a pair of parentheses enclosing a pair of brackets which do not follow the pattern of alternating parentheses and brackets.
+
+Input: "))))([([[]](([" Label: False
+
+- This string is invalid it starts with closing brackets which doesn't follow the pattern.
+
+After reviewing these strings and their labels, it appears that the Pattern P prefers:
+
+1. Empty strings - If no character is provided, it'll return True.
+2. A sequence of alternating "()" and "[]" - It is a mark of a string being valid if it starts with an opening parenthesis, followed by a closing parenthesis, then an opening bracket, followed by a closing bracket and repeats this sequence. For example, "()[]".
+
+Therefore, Pattern P is: A sequence of alternating pairs of parentheses and brackets. It also includes an empty string as a valid string. The pattern must start with a parenthesis and each opening character must be followed directly by its matching closing character before moving on to the next character. Hence, "()" and "[]" are allowed, but not "([" or "[(". This pattern does not allow characters to be nested within one another.

@@ -1,0 +1,10 @@
+Pattern P: All strings of balanced parentheses or brackets, with nesting allowed only inside parentheses (ex. '()([])').
+# Training examples: 17 (8 positive, 9 negative)
+
+# Test sentences: 60
+
+# Correct classifications: 52 
+
+Accuracy: 86%
+
+Chain-of-thought requested: No 

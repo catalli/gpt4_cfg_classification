@@ -1,0 +1,11 @@
+Pattern P: All strings consisting of only left parentheses and right brackets,where each left parenthesis is matched with a right bracket. nesting is allowed.
+
+# Training examples: 20 (10 positive, 10 negative)
+
+# Test sentences: 60
+
+# Correct classifications: 59
+
+Accuracy: 98.3%
+
+Chain-of-thought requested: Yes 

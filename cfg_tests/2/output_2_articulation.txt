@@ -1,0 +1,41 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "()" Label: True
+Input: "()[]" Label: True
+Input: "()[]()" Label: True
+Input: "" Label: True
+Input: "()[]()" Label: True
+Input: "()[]" Label: True
+Input: "()[]" Label: True
+Input: "()[]()[]()[]" Label: True
+Input: "()[]()[]()[]()[]" Label: True
+Input: "()[]()[]()[]()[]()[]()" Label: True
+Input: "(())]]]]())" Label: False
+Input: "([" Label: False
+Input: ")((" Label: False
+Input: "](([)]]([[]])(" Label: False
+Input: "])([][)]()()[))()]" Label: False
+Input: "[[([(([]))])]]" Label: False
+Input: "(([]))" Label: False
+Input: "(())" Label: False
+Input: "([[()]])" Label: False
+Input: "(()())(())(())" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Based on the provided examples, the pattern P seems to be that the string can only consist of the characters "(", ")", "[", "]" and that these bracketing characters must be used in a strictly alternating fashion such that no two consecutive, similar bracketing characters ("()" or "[]") are directly adjacent to each other.
+
+So the string starts with an opening parenthesis "(", then immediately followed by a closing parenthesis ")", or it could start with an opening square bracket "[", immediately followed by a closing square bracket "]". These pairs of brackets or parentheses can be repeated any number of times in the sequence, and the sequence can also be empty, but no two same types of brackets can be next to each other.
+
+In this case, sequences like "[]()", "()[]", "[][][][]()" all fulfill the pattern.
+
+However, strings with consecutive, similar brackets such as "()", "[[", "]]", "((", "[]))", "]]]]", that are not separated by a different type of bracket, do not follow the pattern. Hence, the strings "(())", "[[([(([]))])]]", "[[()]])", and "(()())(())(())" are labeled as False. So it seems consecutive, same brackets are not allowed within Pattern P. 
+
+In conclusion, the Pattern P seems to be strictly alternating pairs of parentheses and brackets, with no two identical consecutive pairs appearing in the string.

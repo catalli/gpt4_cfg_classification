@@ -1,0 +1,86 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "()" Label: True
+Input: "()()()()()()()()()" Label: True
+Input: "()" Label: True
+Input: "()()" Label: True
+Input: "()" Label: True
+Input: "()()()" Label: True
+Input: "()" Label: True
+Input: "()" Label: True
+Input: "()" Label: True
+Input: "()" Label: True
+Input: ")" Label: False
+Input: ")" Label: False
+Input: "((((((((((())())()" Label: False
+Input: "(()(()(()(()()()()()" Label: False
+Input: "()" Label: False
+Input: "(())" Label: False
+Input: "(())" Label: False
+Input: "((()))" Label: False
+Input: "((((())(()))))((()))" Label: False
+Input: "((()))(())" Label: False
+
+
+Additionally, here are a number of unlabeled strings. For each string, label it, in the format given, as True (if you think it fits Pattern P) or False (if you think it does not), and explain your reasoning.
+
+Input: "(())((()))((()))" Label:
+
+Input: "()()()()" Label:
+
+Input: "()()()()()()()()()()()()" Label:
+
+Input: "(())" Label:
+
+Input: "(())(())(())" Label:
+
+Input: "()()" Label:
+
+Input: "(())" Label:
+
+Input: ")))))()((" Label:
+
+Input: "()" Label:
+
+Input: "()()()()()()()()()" Label:
+
+
+Finally, describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Input: "(())((()))((()))" Label: False
+This pattern does not match as it contains nested parentheses which according to the labeled examples is not a part of pattern 'P'.
+
+Input: "()()()()" Label: True
+This pattern is made up of separated and non-nested pairs of parentheses, which we've seen consistently labelled as true in the provided examples .
+
+Input: "()()()()()()()()()()()()" Label: True
+This pattern is made up of separated and non-nested pairs of parentheses, and matches with the pattern 'P'.
+
+Input: "(())" Label: False
+Nested parentheses like this one has always been labeled as false in the examples.
+
+Input: "(())(())(())" Label: False
+This pattern contains nested parentheses. According to the labeled examples, it doesn't match the pattern 'P'.
+
+Input: "()()" Label: True
+The pattern consists only of consecutive parentheses without nesting, which matches pattern 'P'.
+
+Input: "(())" Label: False
+This pattern contains nested parentheses. According to the labeled examples, it doesn't match the pattern 'P'.
+
+Input: ")))))()((" Label: False
+This pattern has unmatched parentheses and doesn't adhere to the structure of pattern 'P'.
+
+Input: "()" Label: True
+The pattern consists of a single pair of open and closed parenthesis, which fits the concept of pattern 'P'.
+
+Input: "()()()()()()()()()" Label: True
+The pattern is made up of separated and non-nested pairs of parentheses, so it matches with pattern 'P'.
+
+Pattern 'P' seems to be comprised of strings of separate, non-nested parentheses, where each open parentheses "(", is immediately followed by a closed parentheses ")". The pattern doesn't appear to incorporate unmatched, isolated, or nested ("(())") parentheses. Since brackets "[]" were not represented in the examples, it isn't clear from the existing data whether they would match pattern 'P'.

@@ -1,0 +1,89 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "([])" Label: True
+Input: "[]" Label: True
+Input: "()" Label: True
+Input: "((([]()((([]))))))()" Label: True
+Input: "(((())))" Label: True
+Input: "()[]" Label: True
+Input: "([])" Label: True
+Input: "(())" Label: True
+Input: ")(" Label: False
+Input: "(" Label: False
+Input: "][" Label: False
+Input: "][)[([()[)()][)]][[]" Label: False
+Input: "](]()[)()[[" Label: False
+Input: "[[]]" Label: False
+Input: "[()]" Label: False
+Input: "[()][[]][()]" Label: False
+Input: "(()[()])" Label: False
+
+
+Additionally, here are a number of unlabeled strings. For each string, label it, in the format given, as True (if you think it fits Pattern P) or False (if you think it does not), and explain your reasoning.
+
+Input: "[()]" Label:
+
+Input: "[]" Label:
+
+Input: "()" Label:
+
+Input: "[([[]][])(](" Label:
+
+Input: "([()])" Label:
+
+Input: "[" Label:
+
+Input: "[[[]]]" Label:
+
+Input: "()()" Label:
+
+Input: "(())" Label:
+
+Input: "(())()" Label:
+
+
+Finally, describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Input: "[()]" Label: False
+Reasoning: This string is enclosed by brackets "[]" instead of parentheses "()".
+
+Input: "[]" Label: True
+Reasoning: This string is enclosed by parentheses or brackets, and each coupled parentheses or brackets are arranged correctly.
+
+Input: "()" Label: True
+Reasoning: This string is enclosed by parentheses '()', and each coupled parentheses is arranged correctly.
+
+Input: "[([[]][])(](" Label: False
+Reasoning: The opening and closing brackets and parentheses are not balanced, as it ends with two opening parentheses.
+
+Input: "([()])" Label: False
+Reasoning: This string is enclosed by brackets "[]" instead of parentheses "()".
+
+Input: "[" Label: False
+Reasoning: An opening bracket has been provided but no closing bracket is present, hence it does not fit the pattern.
+
+Input: "[[[]]]" Label: False
+Reasoning: This string is enclosed by brackets "[]" instead of parentheses "()".
+
+Input: "()()" Label: True
+Reasoning: These are two set of parentheses arranged correctly.
+
+Input: "(())" Label: True
+Reasoning: This string is enclosed by parentheses and each coupled parentheses are arranged correctly.
+
+Input: "(())()" Label: True
+Reasoning: These are three set of parentheses arranged correctly, with each coupled parentheses arranged correctly.
+
+Pattern P is a pattern where:
+1. Each string is balanced and properly nested inside parentheses "()" not square brackets "[]". 
+2. You have equal number of opening "(" and closing ")" parentheses.
+3. The order of parentheses matters, meaning "(" must come before ")".
+4. Parentheses can be nested (e.g., "(())") or sequential (e.g., "()()").
+5. Square brackets "[]" are allowable but they must not serve as the outermost layer. 
+6. Misplaced or unbalanced parentheses or brackets disqualify a string from being in Pattern P.

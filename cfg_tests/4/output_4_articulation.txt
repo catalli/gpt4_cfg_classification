@@ -1,0 +1,59 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "()[]" Label: True
+Input: "(()[])[]" Label: True
+Input: "(()[])[]" Label: True
+Input: "()[(()[])[]]" Label: True
+Input: "()[]" Label: True
+Input: "((()[])[])[()[]]" Label: True
+Input: "()[]" Label: True
+Input: "()[()[]]" Label: True
+Input: "(()[])[]" Label: True
+Input: "()[]" Label: True
+Input: "()[]" Label: True
+Input: "()[]" Label: True
+Input: "()[]" Label: True
+Input: "()[()[]]" Label: True
+Input: "()[]" Label: True
+Input: "()[]" Label: True
+Input: "()[()[]]" Label: True
+Input: "()[]" Label: True
+Input: "()[()[]]" Label: True
+Input: "()[]" Label: True
+Input: "[](([[[)(()[]]](]([]" Label: False
+Input: "[[()([]" Label: False
+Input: "()]))(()" Label: False
+Input: "[]])([][(]()([]" Label: False
+Input: "))()()]())[" Label: False
+Input: "([[[]]])" Label: False
+Input: "()" Label: False
+Input: "([[]])" Label: False
+Input: "()" Label: False
+Input: "()" Label: False
+Input: "([])" Label: False
+Input: "([])" Label: False
+Input: "()" Label: False
+Input: "([[]])" Label: False
+Input: "((()))" Label: False
+Input: "()" Label: False
+Input: "()" Label: False
+Input: "([[]])" Label: False
+Input: "()" Label: False
+Input: "([[[]]])" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Pattern P appears to be strings of parentheses and brackets in which open and close symbols alternate and pair correctly. More specifically, every open parenthesis "(" is followed by a close parenthesis ")", and every open bracket "[" is followed by a close bracket "]", with these pairs potentially nested within each other. 
+
+In other words, if you start at the left of the string and move to the right, for each character, there either has been at least one character of that type's pair (parenthesis or bracket) preceding it but not yet paired, or it starts a new pair.
+
+If any string of parentheses or brackets does not follow this pattern (e.g., having an unmatched or out-of-order closing symbol, or having an opening symbol followed immediately by a different closing symbol) it is deemed to be False. Labeled examples like "()[]", "(()[])[]" are True because they follow the alternating open/close pattern. Those that do not, like "()]))(())", "[](([[[)(()[]]](]([]", are labeled False. 
+
+Overall, the pattern essentially follows the rules of properly matching parentheses and brackets as you might find in mathematical or programming syntax.

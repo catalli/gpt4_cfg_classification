@@ -1,0 +1,40 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "([])" Label: True
+Input: "[]" Label: True
+Input: "()" Label: True
+Input: "((([]()((([]))))))()" Label: True
+Input: "(((())))" Label: True
+Input: "()[]" Label: True
+Input: "([])" Label: True
+Input: "(())" Label: True
+Input: ")(" Label: False
+Input: "(" Label: False
+Input: "][" Label: False
+Input: "][)[([()[)()][)]][[]" Label: False
+Input: "](]()[)()[[" Label: False
+Input: "[[]]" Label: False
+Input: "[()]" Label: False
+Input: "[()][[]][()]" Label: False
+Input: "(()[()])" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Pattern P appears to be any well-formed string of parentheses "()" and brackets "[]" where each opened parenthesis or bracket is properly closed in the correct order. 
+
+In order for a string to adhere to Pattern P, it must:
+
+1. Begin with an opening bracket "[" or an opening parenthesis "(".
+2. Have a corresponding closing bracket "]" or closing parenthesis ")" for every opened one.
+3. Close each parentheses pair "()" or bracket pair "[]" in the reverse order of their opening. This is also known as well-formed or balanced.
+
+Examples of "True" strings like "([])" or "((([]()((([]))))))()" adhere to these rules. On the contrary, "False" strings violate at least one of the rules. For instance, the string "][" starts with a closing bracket, and ")(" has reversed order of parentheses. In other cases, such as "[()]", a closing bracket "]" prematurely closes a parenthesis pair indicating an incorrect nesting of parentheses and brackets, even though they are all technically "closed". The same case applies to "(()[()])" where brackets are prematurely closing parentheses. 
+
+Therefore, Pattern P seems to be a guideline for creating properly nested and well-formed parentheses and brackets.

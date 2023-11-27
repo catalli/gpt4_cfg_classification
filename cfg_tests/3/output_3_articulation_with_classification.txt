@@ -1,0 +1,88 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "()" Label: True
+Input: "(())" Label: True
+Input: "((()))" Label: True
+Input: "((([[[[[]]]]])))" Label: True
+Input: "([])" Label: True
+Input: "([[]])" Label: True
+Input: "([[[]]])" Label: True
+Input: "(([[]]))" Label: True
+Input: "([[[[]]]])" Label: True
+Input: "(([]))" Label: True
+Input: "(]]])[(([(])]][[(])[" Label: False
+Input: "[[()()]" Label: False
+Input: "][][(]((]))])[]]][][" Label: False
+Input: "][(([[))([][]](]" Label: False
+Input: "([()]((" Label: False
+Input: "[]" Label: False
+Input: "([()])" Label: False
+Input: "()()" Label: False
+Input: "()[]" Label: False
+Input: "()([])" Label: False
+
+
+Additionally, here are a number of unlabeled strings. For each string, label it, in the format given, as True (if you think it fits Pattern P) or False (if you think it does not), and explain your reasoning.
+
+Input: "[()]" Label:
+
+Input: "(((())))" Label:
+
+Input: "[()][()]" Label:
+
+Input: "[" Label:
+
+Input: "[()][()][()]" Label:
+
+Input: "(((])]" Label:
+
+Input: "()" Label:
+
+Input: "()" Label:
+
+Input: "([])" Label:
+
+Input: "()" Label:
+
+
+Finally, describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Based on the given examples, I'll label the unlabeled strings as follows:
+
+Input: "[()]" Label: False
+The brackets are not nested within parentheses. All True examples have parentheses outside brackets.
+
+Input: "(((())))" Label: True
+The string consists of only parentheses, which are correctly nested.
+
+Input: "[()][()]" Label: False
+There are multiple separate groups of parentheses and brackets which do not nest within one another.
+
+Input: "[" Label: False
+The string consists of a single bracket without a matching closing bracket.
+
+Input: "[()][()][()]" Label: False
+Similar to another False example, "()[()]", this string has separate groups of parentheses and brackets.
+
+Input: "(((])]" Label: False
+The string contains a closing bracket before a closing parenthesis, which goes against the pattern observed in True examples.
+
+Input: "()" Label: True
+The string is a basic pair of parentheses.
+
+Input: "()" Label: True
+The string is a basic pair of parentheses.
+
+Input: "([])" Label: True
+This string follows a common pattern observed in True examples: brackets nested within parentheses.
+
+Input: "()" Label: True
+The string is a basic pair of parentheses.
+
+Overall, Pattern P seems to consist of strings where brackets are nested correctly within parentheses. The string must have an even number of characters. None of the pairs are left unmatched and brackets are not allowed to stand alone. The pattern doesn't tolerate the presence of multiple, separate groups of parentheses and brackets - all brackets must be nested within all parentheses directly. If any parentheses or brackets are left unmatched or if there are multiple separate groups of parentheses and brackets, the string will not fit Pattern P. That includes situations where a single pair of parentheses or brackets is left alone. Any deviation from the pattern of nested brackets within parentheses results in a False label.

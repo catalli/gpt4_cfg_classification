@@ -1,0 +1,37 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "()" Label: True
+Input: "(())" Label: True
+Input: "((()))" Label: True
+Input: "((([[[[[]]]]])))" Label: True
+Input: "([])" Label: True
+Input: "([[]])" Label: True
+Input: "([[[]]])" Label: True
+Input: "(([[]]))" Label: True
+Input: "([[[[]]]])" Label: True
+Input: "(([]))" Label: True
+Input: "(]]])[(([(])]][[(])[" Label: False
+Input: "[[()()]" Label: False
+Input: "][][(]((]))])[]]][][" Label: False
+Input: "][(([[))([][]](]" Label: False
+Input: "([()]((" Label: False
+Input: "[]" Label: False
+Input: "([()])" Label: False
+Input: "()()" Label: False
+Input: "()[]" Label: False
+Input: "()([])" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Pattern P seems to be strings where for every opening bracket (either "(" or "["), there is a corresponding closing bracket (either ")" or "]") in the correct nested order. This means that for every opening bracket, there must be a corresponding closing bracket of the same type that has not been closed by another set of brackets inside of it.
+
+Put another way, the string must be a valid statement in a language that only contains expressions in parentheses and brackets. For instance, "(())" or "[[]]" work, but "()" and "[]" do not work when they are next to each other like "()[]" because the second set of parentheses or brackets doesn't enclose the first. A string like "([()])" is also not matched, because although every opening bracket has a corresponding closing bracket, the square brackets are inside parentheses, not encompassing them.
+
+This pattern can be described as a "properly nested" string of parentheses and brackets. So, any string consisting solely of parentheses and brackets that opens and closes all of its elements in a nested, hierarchical order, will fit Pattern P. Otherwise, it will not.

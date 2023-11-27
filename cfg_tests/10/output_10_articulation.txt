@@ -1,0 +1,46 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "(]((]]" Label: True
+Input: "(((]]]" Label: True
+Input: "(((](]]((((]]]]]" Label: True
+Input: "(](((]]]((]]" Label: True
+Input: "((]]" Label: True
+Input: "(]" Label: True
+Input: "((((]]]]" Label: True
+Input: "((]]" Label: True
+Input: "(]" Label: True
+Input: "(((]((((]]]]]]" Label: True
+Input: "()" Label: False
+Input: "()[([])]" Label: False
+Input: "()[()[()[]]]" Label: False
+Input: "[]" Label: False
+Input: "(()[])[(()[])[]]" Label: False
+Input: "[[))[)" Label: False
+Input: "[[))" Label: False
+Input: "[[))[)[)" Label: False
+Input: "[[))[[[)))" Label: False
+Input: "[[[[)[)))[[)))" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Based on the examples provided, it appears that the identified pattern P is as follows:
+
+A string fits the pattern P if there are no square brackets "[ ]" and the parentheses "()" appear in a particular order. The string should start with an open parenthesis "(" followed by a closing square bracket "]", and then continue with any number of repeating units of open parentheses "(" followed by closing square brackets "]". Therefore, the pattern is "(]" and additional "(]" pairs can be appended to form strings like "(](]" or "(((]]]" and so on. 
+
+Any string that deviates from this pattern or includes a pair of matching of parenthesis "()" or matching square brackets "[]" or mismatched pair like "[" or "]" (alone and irrespective of their order) does not fit pattern P, and is hence labeled as False.
+
+This rule seems to consistently explain all the sample strings provided. Let’s break down a few examples:
+
+- Input: "(]((]]" Label: True - This fits the pattern since it starts with (] and has other combinations of "(]".
+- Input: "((((]]]]" Label: True - This also fits the pattern as it's the same repeating pattern of "(]".
+- Input: "()" Label: False - This does not fit the pattern as it includes a pair of matching parentheses.
+- Input: "[[))[)[)" Label: False - This also does not fit, as it contains unmatched and/or incorrectly ordered characters.
+
+Therefore, the strings fitting pattern P contain "(" and "]", functioning as if they were a matching pair, and no other configurations with different combinations of these four types of brackets and parentheses match the pattern.

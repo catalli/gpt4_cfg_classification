@@ -1,0 +1,27 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "(" Label: True
+Input: "(((" Label: True
+Input: "(((((" Label: True
+Input: "(((((((" Label: True
+Input: "(((((((((" Label: True
+Input: "((" Label: False
+Input: "((((" Label: False
+Input: "((((((" Label: False
+Input: "((((((((" Label: False
+Input: "((((((((((" Label: False
+Input: "()" Label: False
+Input: "((()))" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Based on the examples given, Pattern P matches the strings that consist of odd number of consecutive opening parentheses "(" and does not match any other strings. This pattern does not include closing parentheses ")" or brackets "[]" of any kind, as indicated by their absence in the provided examples.
+
+The reasoning behind this is that all strings labelled as True are composed of an odd number of "("s and all strings labelled as False have either an even number of "("s or include ")" or both "[" and "]". Therefore, Pattern P must be specifically about strings with an odd number of consecutive opening parentheses and nothing else.

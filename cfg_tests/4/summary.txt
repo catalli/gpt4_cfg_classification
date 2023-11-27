@@ -1,0 +1,11 @@
+Pattern P: All strings of alternating parentheses and brackets, with nesting allowed and a parenthesis-delimited structure always starting each recursion level.
+
+# Training examples: 40 (20 positive, 20 negative)
+
+# Test sentences: 200
+
+# Correct classifications: 199
+
+Accuracy: 99.5%
+
+Chain-of-thought requested: Yes 

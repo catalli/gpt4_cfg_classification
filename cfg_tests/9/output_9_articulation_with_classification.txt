@@ -1,0 +1,69 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "(" Label: False
+Input: "(((" Label: False
+Input: "(((((" Label: False
+Input: "(((((((" Label: False
+Input: "(((((((((" Label: False
+Input: "((" Label: True
+Input: "((((" Label: True
+Input: "((((((" Label: True
+Input: "((((((((" Label: True
+Input: "((((((((((" Label: True
+Input: "()" Label: False
+Input: "((()))" Label: False
+
+
+Additionally, here are a number of unlabeled strings. For each string, label it, in the format given, as True (if you think it fits Pattern P) or False (if you think it does not), and explain your reasoning.
+
+Input: "(((((" Label:
+
+Input: "()" Label:
+
+Input: "((((((((" Label:
+
+Input: "(" Label:
+
+Input: "()" Label:
+
+Input: "((" Label:
+
+Input: "((" Label:
+
+Input: "((" Label:
+
+Input: "((((((" Label:
+
+Input: "(" Label:
+
+
+Finally, describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Input: "(((((" Label: False (Because pattern P requires even number of open parentheses)
+   
+Input: "()" Label: False (Because pattern P requires even number of open parentheses and no closing parenthesis is accepted)
+   
+Input: "((((((((" Label: True (Because pattern P requires even number of open parentheses)
+   
+Input: "(" Label: False (Because pattern P requires even number of open parentheses)
+   
+Input: "()" Label: False (Because pattern P requires even number of open parentheses and no closing parenthesis is accepted)
+   
+Input: "((" Label: True (Because pattern P requires even number of open parentheses)
+   
+Input: "((" Label: True (Because pattern P requires even number of open parentheses)
+   
+Input: "((" Label: True (Because pattern P requires even number of open parentheses)
+
+Input: "((((((" Label: True (Because pattern P requires even number of open parentheses)
+  
+Input: "(" Label: False (Because pattern P requires even number of open parentheses)
+
+
+Finally, from analyzing the given examples, I think Pattern P is a pattern that matches strings that consist of an even number of open parentheses "(" and does not include any closing parentheses ")" or brackets of any kind "[]". The number of open parentheses can be 2, 4, 6, 8, and so on.

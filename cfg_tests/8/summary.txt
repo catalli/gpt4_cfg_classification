@@ -1,0 +1,11 @@
+Pattern P: All strings consisting solely of an odd number of opening parentheses.
+
+# Training examples: 12 (5 positive, 7 negative)
+
+# Test sentences: 60
+
+# Correct classifications: 54
+
+Accuracy: 90%
+
+Chain-of-thought requested: Yes 

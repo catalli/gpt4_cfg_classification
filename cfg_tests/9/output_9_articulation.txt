@@ -1,0 +1,29 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "(" Label: False
+Input: "(((" Label: False
+Input: "(((((" Label: False
+Input: "(((((((" Label: False
+Input: "(((((((((" Label: False
+Input: "((" Label: True
+Input: "((((" Label: True
+Input: "((((((" Label: True
+Input: "((((((((" Label: True
+Input: "((((((((((" Label: True
+Input: "()" Label: False
+Input: "((()))" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Pattern P seems to be defined as a string that consists only of pairs of open parentheses and does not contain any closing parentheses or brackets.
+
+The reasoning behind this is the following: All strings which consist solely of an even number of open parentheses, such as "((", "((((", and so forth, are classified as True. However, any string which includes a closing parenthesis or does not have an even number of open parentheses is classified as False.
+
+Therefore, Pattern P appears to unambiguously match strings that consist solely of pairs of open parentheses, with no presence of a closing parenthesis or any kind of bracket.

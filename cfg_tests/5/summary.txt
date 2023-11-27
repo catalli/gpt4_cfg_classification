@@ -1,0 +1,11 @@
+Pattern P: All strings of balanced parentheses, with no nesting allowed (ex. '()()').
+
+# Training examples: 20 (10 positive, 10 negative)
+
+# Test sentences: 60
+
+# Correct classifications: 60 
+
+Accuracy: 100%
+
+Chain-of-thought requested: Yes 

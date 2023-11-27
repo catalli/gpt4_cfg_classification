@@ -1,0 +1,11 @@
+Pattern P: All strings consisting solely of an even number of opening parentheses.
+
+# Training examples: 12 (5 positive, 7 negative)
+
+# Test sentences: 60
+
+# Correct classifications: 58
+
+Accuracy: 96.7%
+
+Chain-of-thought requested: Yes 

@@ -1,0 +1,41 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "((())))" Label: True
+Input: "(()))" Label: True
+Input: "(()))" Label: True
+Input: "((())" Label: True
+Input: "(((((((()))))))" Label: True
+Input: "((())" Label: True
+Input: "((())" Label: True
+Input: "((())" Label: True
+Input: "(()" Label: True
+Input: "())" Label: True
+Input: "(())" Label: False
+Input: "()" Label: False
+Input: "((()))" Label: False
+Input: "(())" Label: False
+Input: "()" Label: False
+Input: "((((((()))))))" Label: False
+Input: "()" Label: False
+Input: "()" Label: False
+Input: "()" Label: False
+Input: "(((())))" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Pattern P seems to be any string of parentheses where the total number of parentheses is unbalanced or the parentheses are not properly nested. 
+
+In other words, the string will match pattern P if it contains more of one type of parentheses, "(" or ")", and/or if there is not an immediate corresponding opposite parenthesis for each parenthesis. The strings are not balanced pairs of open and close parentheses which represent valid and complete expressions.
+
+For example, the string "((())))" matches Pattern P because there are more closing parentheses than opening ones, as does the string "(()))" for the same reason.
+
+On the other hand, the strings that do not match Pattern P, all have balanced pairs of parentheses in a proper order, such as "()". Here, there are equal numbers of "(" and ")" and they are in a valid order. 
+
+This suggests that Pattern P is defined as strings with unbalanced or not properly nested parentheses.

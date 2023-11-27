@@ -1,0 +1,11 @@
+Pattern P: All sets of strictly-nested parentheses which are imbalanced.
+ 
+# Training examples: 20 (10 positive, 10 negative)
+
+# Test sentences: 60
+
+# Correct classifications: 57
+
+Accuracy: 95% 
+
+Chain-of-thought requested: Yes 

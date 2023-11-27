@@ -1,0 +1,11 @@
+Pattern P: All strings of matched, nested parentheses, which can alternatively contain brackets, which can nest only brackets.
+
+# Training examples: 20 (10 positive, 10 negative)
+
+# Test sentences: 100
+
+# Correct classifications: 88
+
+Accuracy: 88%
+
+Chain-of-thought requested: Yes 

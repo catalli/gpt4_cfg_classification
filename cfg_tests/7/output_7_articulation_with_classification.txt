@@ -1,0 +1,80 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "((())))" Label: True
+Input: "(()))" Label: True
+Input: "(()))" Label: True
+Input: "((())" Label: True
+Input: "(((((((()))))))" Label: True
+Input: "((())" Label: True
+Input: "((())" Label: True
+Input: "((())" Label: True
+Input: "(()" Label: True
+Input: "())" Label: True
+Input: "(())" Label: False
+Input: "()" Label: False
+Input: "((()))" Label: False
+Input: "(())" Label: False
+Input: "()" Label: False
+Input: "((((((()))))))" Label: False
+Input: "()" Label: False
+Input: "()" Label: False
+Input: "()" Label: False
+Input: "(((())))" Label: False
+
+
+Additionally, here are a number of unlabeled strings. For each string, label it, in the format given, as True (if you think it fits Pattern P) or False (if you think it does not), and explain your reasoning.
+
+Input: "(())" Label:
+
+Input: "(())" Label:
+
+Input: "((((())))" Label:
+
+Input: "(())" Label:
+
+Input: "(((()))" Label:
+
+Input: "(((()))" Label:
+
+Input: "((()))" Label:
+
+Input: "(())" Label:
+
+Input: "())" Label:
+
+Input: "((((())))" Label:
+
+
+Finally, describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+After closely examining the provided examples, my labels and explanations for the unlabeled strings would be as follows:
+
+Input: "(())" Label: False. The string is perfectly balanced.
+
+Input: "(())" Label: False. Again, the string is perfectly balanced.
+
+Input: "((((())))" Label: True. This string has excess opening brackets.
+
+Input: "(())" Label: False. Again, it is balanced.
+
+Input: "(((()))" Label: True. Excess opening brackets are present.
+
+Input: "(((()))" Label: True. Excess opening brackets are present.
+
+Input: "((()))" Label: False. Balance between opening and closing brackets is maintained.
+
+Input: "(())" Label: False. String is balanced.
+
+Input: "())" Label: True. This string has excess closing brackets.
+
+Input: "((((())))" Label: True. This has excess opening brackets.
+
+Upon reviewing the examples, we can ascertain the pattern. 
+
+Pattern P is: a string of parentheses is considered to match Pattern P if and only if it is unbalanced in terms of the number of opening brackets "(" and closing brackets ")". Specifically, if there are more opening brackets than closing brackets or vice-versa. Any balanced strings, i.e., those with an equal number of opening and closing parentheses, do not match Pattern P.

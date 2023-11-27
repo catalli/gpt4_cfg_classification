@@ -1,0 +1,35 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+Input: "()" Label: True
+Input: "()()()()()()()()()" Label: True
+Input: "()" Label: True
+Input: "()()" Label: True
+Input: "()" Label: True
+Input: "()()()" Label: True
+Input: "()" Label: True
+Input: "()" Label: True
+Input: "()" Label: True
+Input: "()" Label: True
+Input: ")" Label: False
+Input: ")" Label: False
+Input: "((((((((((())())()" Label: False
+Input: "(()(()(()(()()()()()" Label: False
+Input: "()" Label: False
+Input: "(())" Label: False
+Input: "(())" Label: False
+Input: "((()))" Label: False
+Input: "((((())(()))))((()))" Label: False
+Input: "((()))(())" Label: False
+
+
+Describe, explaining your reasoning, what you think Pattern P is. As has been said before, Pattern P is a pattern which unambiguously matches some strings in the set of strings consisting entirely of the characters "(", ")", "[", and "]", and does not match any others.
+
+Pattern P appears to be strings that consist solely of an equal number of opening "(" and closing ")" parentheses, and where each opening parenthesis is immediately followed by its corresponding closing parenthesis. In other words, we are only looking for directly adjacent pairs of parentheses, like "()".
+
+This reasoning is formed from observing that all the strings labelled true consist of pairs of parentheses with no extra characters between the parentheses pairs. In contrast, the strings marked as false have either unmatched parentheses or nested parentheses, such as "(())" and "(()". Also, it's worth noting that none of the examples given include brackets "[", "]", so brackets weren't necessary for determining the pattern in this specific case.

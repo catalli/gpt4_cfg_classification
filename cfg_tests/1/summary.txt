@@ -1,0 +1,11 @@
+Pattern P: All strings consisting of balanced parentheses and brackets, with nesting allowed.
+
+# Training examples: 20 (10 positive, 10 negative)
+
+# Test sentences: 100
+
+# Correct classifications: 100
+
+Accuracy: 100%
+
+Chain-of-thought requested: Yes 

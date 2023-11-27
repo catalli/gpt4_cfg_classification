@@ -1,0 +1,15 @@
+There is a pattern which unambiguously matches some strings in the set of strings consisting entirely of parentheses and brackets, and which does not match others, which we call pattern P. This pattern can be simply articulated in natural language.
+
+Below are some strings consisting solely of parentheses and brackets, with labels already given (True if they fit pattern P or False if they do not). These strings are labeled True if they fit pattern P, and False if they do not. Each string is presented in the following format:
+
+Input: "The content of the string" Label: True (if it fits pattern P) or False (if it does not)
+
+Below are the example, labeled strings for you to understand what pattern P is.
+
+TRAIN_SENTENCES
+
+Now, here is a string without labels given.
+
+TEST_SENTENCES
+
+You will now label this string. Remember, the string must be labeled True if it fits pattern P as you understand it from the labeled strings already given, and False otherwise. First, write an explanation, prefixed with "EXPLN:", of why you think the string fits or does not fit pattern P. Then, given this explanation, write the string with the label that makes sense, in the format given.
